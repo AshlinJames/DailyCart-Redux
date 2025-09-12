@@ -3,19 +3,19 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="bg-purple-900 text-white py-10 px-6 mt-5">
+     <footer className="bg-purple-900 text-white py-10 px-6 mt-5">
+      {/* Grid Layout */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         
         {/* Brand / About */}
         <div>
           <h2 className="text-xl font-bold flex items-center gap-2">
-            <i className="fa-solid fa-truck-fast"></i> Daily cart
+            <i className="fa-solid fa-truck-fast"></i> Daily Cart
           </h2>
           <p className="mt-3 text-sm leading-6">
-            Designed and built with all the love in the world by the Luminar
-            team with the help of our contributors.
+            Designed and built with all the love in the world by the Luminar team
+            with the help of our contributors.
           </p>
-          
         </div>
 
         {/* Links */}
@@ -32,9 +32,9 @@ function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-3">Guides</h3>
           <ul className="space-y-2">
-            <li><a href="#" className="hover:underline">React</a></li>
-            <li><a href="#" className="hover:underline">React Bootstrap</a></li>
-            <li><a href="#" className="hover:underline">React Router</a></li>
+            <li><a href="https://react.dev/" className="hover:underline">React</a></li>
+            <li><a href="https://react-bootstrap.netlify.app/" className="hover:underline">React Bootstrap</a></li>
+            <li><a href="https://reactrouter.com/" className="hover:underline">React Router</a></li>
           </ul>
         </div>
 
@@ -67,7 +67,7 @@ function Footer() {
 
       {/* Bottom Section */}
       <div className="mt-10 text-center text-sm border-t border-purple-400 pt-4">
-        Copyright © Ashlin James, 2025Daily Cart. Built with React Redux.
+        © 2025 Daily Cart | Built with React & Redux by <span className="font-semibold">Ashlin James</span>.
       </div>
     </footer>
   );

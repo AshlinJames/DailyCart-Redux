@@ -1,14 +1,34 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 
-function Header() {
+const Header = () => {
+    const userWishlist = useSelector(state=state.wishlistReducer)
     return (
-        <nav className='flex w-full text-xl bg-purple-900 text-white font-bold  p-5 justify-between'>
-            <Link to={'/'} className='text-2xl'  ><i className="fa-solid fa-truck-fast"></i><span> Daily Cart</span></Link>
-            <ul className='flex'>
-                <li className='px-5'><Link to={'/wishlist'}><i className="fa-solid fa-heart me-1 text-red-500"></i>Wishlist<span className='p-1 bg-black  rounded-full'>10</span></Link></li>
-                <li className='mx-5'><Link to={'/cart'}><i className="fa-solid fa-cart-shopping me-1 text-green-500"></i>cart<span className='p-1 bg-black  rounded-full'>20</span></Link></li>
+        <nav className="flex flex-col md:flex-row md:justify-between items-center w-full text-xl bg-purple-900 text-white font-bold p-5">
+            {/* Logo */}
+            <Link to="/" className="text-2xl mb-3 md:mb-0 flex items-center gap-2">
+                <i className="fa-solid fa-truck-fast"></i>
+                <span>Daily Cart</span>
+            </Link>
+
+            {/* Menu */}
+            <ul className="flex flex-col md:flex-row items-center">
+                <li className="px-5 py-2 md:py-0">
+                    <Link to="/wishlist" className="flex items-center gap-1">
+                        <i className="fa-solid fa-heart text-red-500"></i>
+                        Wishlist
+                        <span className="ml-1 px-2 bg-black rounded-full text-sm">10</span>
+                    </Link>
+                </li>
+                <li className="px-5 py-2 md:py-0">
+                    <Link to="/cart" className="flex items-center gap-1">
+                        <i className="fa-solid fa-cart-shopping text-green-500"></i>
+                        Cart
+                        <span className="ml-1 px-2 bg-black rounded-full text-sm">20</span>
+                    </Link>
+                </li>
             </ul>
         </nav>
     )
