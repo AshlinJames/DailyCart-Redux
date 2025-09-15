@@ -40,7 +40,7 @@ const View = () => {
 
         {/* Buttons under image */}
         <div className="flex gap-4">
-          <button className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
+          <button onClick={handleAddToWishlist} className="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 transition">
             ADD TO WISHLIST
           </button>
           <button className="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition">

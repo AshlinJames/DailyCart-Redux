@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 const Header = () => {
-    const userWishlist = useSelector(state=state.wishlistReducer)
+    const userWishlist = useSelector(state => state.wishlistReducer)
     return (
         <nav className="flex flex-col md:flex-row md:justify-between items-center w-full text-xl bg-purple-900 text-white font-bold p-5">
             {/* Logo */}
@@ -19,7 +19,7 @@ const Header = () => {
                     <Link to="/wishlist" className="flex items-center gap-1">
                         <i className="fa-solid fa-heart text-red-500"></i>
                         Wishlist
-                        <span className="ml-1 px-2 bg-black rounded-full text-sm">10</span>
+                        <span className="ml-1 px-2 bg-black rounded-full text-sm">{userWishlist?.length}</span>
                     </Link>
                 </li>
                 <li className="px-5 py-2 md:py-0">
