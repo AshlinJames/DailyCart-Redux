@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
     const userWishlist = useSelector(state => state.wishlistReducer)
+    const userCart = useSelector(state => state.cartReducer)
+
     return (
         <nav className="flex flex-col md:flex-row md:justify-between items-center w-full text-xl bg-purple-900 text-white font-bold p-5">
             {/* Logo */}
@@ -26,7 +28,7 @@ const Header = () => {
                     <Link to="/cart" className="flex items-center gap-1">
                         <i className="fa-solid fa-cart-shopping text-green-500"></i>
                         Cart
-                        <span className="ml-1 px-2 bg-black rounded-full text-sm">20</span>
+                        <span className="ml-1 px-2 bg-black rounded-full text-sm">{userCart?.length}</span>
                     </Link>
                 </li>
             </ul>
