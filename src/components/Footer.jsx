@@ -67,7 +67,7 @@ function Footer() {
 
       {/* Bottom Section */}
       <div className="mt-10 text-center text-sm border-t border-purple-400 pt-4">
-        © 2025 Daily Cart | Built with React & Redux by <span className="font-semibold">Ashlin James</span>.
+        © 2025 Daily Cart | Built with ♡ by <span className="font-semibold">Ashlin James</span>
       </div>
     </footer>
   );
